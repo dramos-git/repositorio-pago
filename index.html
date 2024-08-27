@@ -1,9 +1,37 @@
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar con Stripe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compra de Acceso a Internet</h1>
+    <p>Haz clic en el botón de abajo para comprar acceso a internet.</p>
+    
+    <!-- Contenedor del Botón de Compra -->
+    <div class="button-container">
+        <!-- Stripe Buy Button Script -->
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1PsUH2A0TRU5bZIEE49xTbH9"
-  publishable-key="pk_test_51PsTeDA0TRU5bZIEBMhFoJlE9IZFpj2AFfqsZAfPjZU4I9ki4RgIq4TE4jXYNthXIRvZZvgRLFnBOA8DY1yyUL9s00v38vKtsm"
->
-</stripe-buy-button>
+        <!-- Stripe Buy Button -->
+        <stripe-buy-button
+          buy-button-id="buy_btn_1PsUH2A0TRU5bZIEE49xTbH9"
+          publishable-key="pk_test_51PsTeDA0TRU5bZIEBMhFoJlE9IZFpj2AFfqsZAfPjZU4I9ki4RgIq4TE4jXYNthXIRvZZvgRLFnBOA8DY1yyUL9s00v38vKtsm"
+        ></stripe-buy-button>
+    </div>
+</body>
+</html>
