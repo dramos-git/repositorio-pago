@@ -3,35 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagar con Stripe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        .button-container {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Portal Cautivo</title>
 </head>
 <body>
-    <h1>Compra de Acceso a Internet</h1>
-    <p>Haz clic en el botón de abajo para comprar acceso a internet.</p>
-    
-    <!-- Contenedor del Botón de Compra -->
-    <div class="button-container">
-        <!-- Stripe Buy Button Script -->
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-        <!-- Stripe Buy Button -->
-        <stripe-buy-button
-          buy-button-id="buy_btn_1PsUH2A0TRU5bZIEE49xTbH9"
-          publishable-key="pk_test_51PsTeDA0TRU5bZIEBMhFoJlE9IZFpj2AFfqsZAfPjZU4I9ki4RgIq4TE4jXYNthXIRvZZvgRLFnBOA8DY1yyUL9s00v38vKtsm"
-        ></stripe-buy-button>
-    </div>
+    <h1>Bienvenido al Portal Cautivo</h1>
+    <p>Para acceder a Internet, por favor haz clic en el siguiente botón para realizar tu pago.</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="TU_BUTTON_ID_DE_PAYPAL">
+        <input type="submit" value="Pagar con PayPal">
+    </form>
 </body>
 </html>
